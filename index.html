@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link href="css/normalize_min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
-  <link href="css/style_min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <title>Седона</title>
 </head>
 
@@ -13,23 +13,23 @@
   <div class="container">
     <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
     <header class="page-header">
-      <a class="page-header__logo" href="">
+      <a class="page-header__logo-link" href="">
         <img class="page-header__logo-image" src="img/index-logo.svg" alt="Логотип сайта Седона" width="140" height="72">
       </a>
       <nav class="main-nav">
-        <button  class="main-nav__toogle"type="button" name="button">Открыть меню</button>
-          <div class="main-nav__wrapper">
+        <button class="main-nav__toogle" type="button" name="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list_item">
+            <li class="site-list__item site-list__item--active">
               <a href="information.html">Информация</a>
             </li>
-            <li class="site-list_item">
+            <li class="site-list__item">
               <a href="multimedia.html">Фото и видео</a>
             </li>
-            <li class="site-list_item">
+            <li class="site-list__item">
               <a href="page-form.html">Форма отзыва</a>
             </li>
-            <li class="site-list_item">
+            <li class="site-list__item">
               <a href="html-academy.html">Html academy</a>
             </li>
           </ul>
@@ -41,70 +41,74 @@
       <section class="intro">
         <header class="intro__header">
           <h3 class="visually-hidden">Блок приветсвия</h3>
-          <img class="intro-header__intro-image" src="img/welcome.svg" width="459" height="353" alt="Картинка добро пожаловать">
+          <img class="intro__intro-image" src="img/welcome.svg" width="459" height="353" alt="Картинка добро пожаловать">
         </header>
       </section>
       <section class="preview">
-        <header class="preview-header">
+        <header class="preview__header">
           <h2 class="preview__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-          <p class="preview__intro">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          <p class="preview__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </header>
       </section>
-      <section class="reason-block">
-        <header class="reason-header">
-          <h3 class="reason__title">Настоящий городок</h3>
-          <span class="reason__item">— №1 —</span>
-          <p class="reason__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-        </header>
-
-
-
-
-
-        
-        <div class="reason-image">
-          <img src="img/state.jpg" width="800" height="256" alt="Город">
+      <section class="reason">
+        <div class="reason__wrapper">
+          <header class="reason__header">
+            <h3 class="reason__title">Настоящий городок</h3>
+            <span class="reason__item-number">— №1 —</span>
+            <p class="reason__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </header>
+          <div>
+            <img class="reason reason-image--state-pictures" src="img/state.jpg" width="800" height="256" alt="Город">
+          </div>
         </div>
       </section>
-      <section class="advantages-block">
-        <div class="advantages-item house-ico">
-          <h3>Жильё</h3>
-          <p>Рекомендуем пожить в настоящем мотеле, всё как в кино</p>
-        </div>
-        <div class="advantages-item food-ico">
-          <h3>Еда</h3>
-          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-        </div>
-        <div class="advantages-item souvenirs-ico">
-          <h3>Сувениры</h3>
-          <p>Не только китайского, но и местного производства</p>
+      <section class="advantages">
+        <div class="advantages-wrapper">
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--house-ico">
+              <h3 class="advantages__title">Жильё</h3>
+              <p class="advantages__description">Рекомендуем пожить в настоящем мотеле, всё как в кино</p>
+            </li>
+            <li class="advantages__item advantages__item--food-ico">
+              <h3 class="advantagem__title">Еда</h3>
+              <p class="advantages__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+            <li class="advantages__item advantages__item--souvenirs-ico">
+              <h3 class="advantages__title">Сувениры</h3>
+              <p class="advantages__description">Не только китайского, но и местного производства</p>
+            </li>
+          </ul>
+      </section>
+      <section class="reason">
+        <div class="reason__wrapper">
+          <div class="reason-image">
+            <img class="reason reason-image--bridge-pictures" src="img/bridge.jpg" width="800" height="256" alt="Мост дъявола">
+          </div>
+          <header class="reason__header">
+            <h3 class="reason__title">Там есть<br> мост дьявола</h3>
+            <span class="reason__item-number">— №2 —</span>
+            <p class="reason__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
       </section>
-      <section class="reason-block">
-        <div class="reason-image">
-          <img src="img/bridge.jpg" width="800" height="256" alt="Мост дъявола">
-        </div>
-        <div class="reason-info">
-          <h3>Там есть<br> мост дьявола</h3>
-          <span>— №2 —</span>
-          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-        </div>
-      </section>
-      <section class="reason-block">
-        <div class="reason-item">
-          <h3>Небольшая площадь</h3>
-          <span>— №3 —</span>
-          <p>Все достопримечательности находятся очень близко</p>
-        </div>
-        <div class="reason-item">
-          <h3>Красивая дорога</h3>
-          <span>— №4 —</span>
-          <p>Ехать в Седону из Лас-Вегаса совсем не скучно</p>
-        </div>
-        <div class="reason-item">
-          <h3>Мало туристов</h3>
-          <span>— №5 —</span>
-          <p>Большинство едет в гранд каньон и&nbsp;толпится там</p>
+      <section class="reason">
+        <div class="reason__wrapper">
+          <ul class="reason__list">
+            <li class="reason__wrapper">
+              <h3 class="reason__title">Небольшая площадь</h3>
+              <span class="reason__item-number">— №3 —</span>
+              <p class="reason__description">Все достопримечательности находятся очень близко</p>
+            </li>
+            <li class="reason-item">
+              <h3 class="reason__title">Красивая дорога</h3>
+              <span class="reason__item-number">— №4 —</span>
+              <p class="reason__description">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
+            </li>
+            <li class="reason-item">
+              <h3 class="reason__title">Мало туристов</h3>
+              <span class="reason__item-number">— №5 —</span>
+              <p class="reason__description">Большинство едет в гранд каньон и&nbsp;толпится там</p>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="search-block">
@@ -214,7 +218,6 @@
       </div>
     </footer>
   </div>
-  <script src="js/script_min.js"></script>
 </body>
 
 </html>
