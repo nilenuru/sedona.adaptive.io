@@ -1,11 +1,11 @@
-var gulp = require('gulp');
-sass = require('gulp-sass');
-gulp.task('sass', function() {
-  return gulp.src('source/sass/**/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('source/css'))
-});
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    browserSync = require('browser-sync'),
+    gulp = require('gulp'),
+    concatCss = require('gulp-concat')
 
-gulp.task('watch', function() {
-  gulp.watch('source/sass/**/*.scss', gulp.series('sass'));
+gulp.task('default', function() {
+    return gulp.src('source/css/*.css')
+        .pipe(concatCss('styles/style111.css'))
+        .pipe(gulp.dest('source/css'))
 });

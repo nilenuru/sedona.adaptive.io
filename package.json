@@ -2,7 +2,16 @@
   "name": "sedona.adaptive.io",
   "version": "1.0.0",
   "description": "* `npm install` - установка зависимостей * `npm run build` - сборка проекта * `npm test` - запуск теста на наличие стилистических ошибок * `npm start` - сборка проекта и запуск локального сервера * `npm run deploy` - сборка проекта и отправка собранного проекта на GitHub Pages",
-  "main": "index.js",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "watch": "^1.0.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,17 +19,10 @@
     "type": "git",
     "url": "git+https://github.com/nilenuru/sedona.adaptive.io.git"
   },
-  "author": "",
+  "author": "alex",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nilenuru/sedona.adaptive.io/issues"
   },
-  "homepage": "https://github.com/nilenuru/sedona.adaptive.io#readme",
-  "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-watch": "^5.0.1"
-  },
-  "dependencies": {
-    "gulp-sass": "^4.0.2"
-  }
+  "homepage": "https://github.com/nilenuru/sedona.adaptive.io#readme"
 }
