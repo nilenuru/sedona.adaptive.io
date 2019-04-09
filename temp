@@ -1,0 +1,27 @@
+gulp.task('serve', ['sass'], function(){
+  browserSync.init ({
+    server: {
+      baseDir: 'source'
+    },
+    notify: false
+  });
+  gulp.watch("source/sass/*.scss", ['sass']);
+    gulp.watch("source/*.html").on('change', browserSync.reload);
+});
+
+gulp.watch('watch', gulp.parallel('browserSync','sass'), function() {
+  gulp.watch('source/sass/**/*.scss', gulp.parallel('sass'));
+});
+
+
+
+gulp.task('default', function() {
+  return gulp.src('source/css/*.css')
+    .pipe(concatCss('style.css'))
+    .pipe(cleanCSS({
+      compatibility: 'ie8'
+    }))
+    //  .pipe(postcss())
+    .pipe(rename('style_min.css'))
+    .pipe(gulp.dest('source/css'))
+});
