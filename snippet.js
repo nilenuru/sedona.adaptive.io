@@ -6,3 +6,9 @@ gulp.task('default', function() {
         file.extname == 'src/css' ? 'css' : 'dest';
     }));
 });
+
+
+open-in-browsers
+pigments
+minimap
+autocomplete-paths

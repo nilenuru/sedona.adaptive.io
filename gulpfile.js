@@ -10,7 +10,7 @@ var gulp = require('gulp'),
   watch = require('gulp-watch');
 
 gulp.task('sass', function() {
-  return gulp.src('src/sass/**/*.scss')
+  return gulp.src('src/sass/style.scss')
     .pipe(sass())
     .pipe(cleanCSS())
     .pipe(rename('style.min.css'))
@@ -48,7 +48,7 @@ gulp.task('scripts', function() {
       //  .pipe(postcss())
 });*/
 gulp.task('watch', function() {
-  gulp.watch('src/sass/**/*.scss', gulp.parallel('sass'));
+  gulp.watch('src/sass/style.scss', gulp.parallel('sass'));
   gulp.watch('src/*.html', browserSync.reload);
   gulp.watch(['src/js/common.js', 'src/libs/**/*.js'], gulp.parallel('scripts'));
 });
