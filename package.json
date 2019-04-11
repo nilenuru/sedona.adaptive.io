@@ -3,18 +3,22 @@
   "version": "1.0.0",
   "description": "* `npm install` - установка зависимостей * `npm run build` - сборка проекта * `npm test` - запуск теста на наличие стилистических ошибок * `npm start` - сборка проекта и запуск локального сервера * `npm run deploy` - сборка проекта и отправка собранного проекта на GitHub Pages",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "bower": "^1.8.8"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-scss": "^1.4.0",
     "gulp-sync-bower": "^1.0.0",
+    "gulp-uglifyjs": "^0.6.2",
     "gulp-watch": "^5.0.1",
     "node-sass": "^4.11.0",
     "watch": "^1.0.2"

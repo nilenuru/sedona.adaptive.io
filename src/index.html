@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <!--link href="css/normalize_min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet"-->
+  <link href="css/style.min.css" rel="stylesheet">
+  <title>Седона</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+    <header class="page-header">
+      <a class="page-header__logo-link" href="">
+        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип сайта Седона" width="102" height="83">
+      </a>
+      <nav class="page-nav">
+        <button class="page-nav__toogle" type="button" name="button">Открыть меню</button>
+        <div class="page-nav__wrapper">
+          <ul class="page-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="information.html">Информация</a>
+            </li>
+            <li class="site-list__item">
+              <a href="multimedia.html">Фото и видео</a>
+            </li>
+            <li class="site-list__item">
+              <a href="page-form.html">Форма отзыва</a>
+            </li>
+            <li class="site-list__item">
+              <a href="html-academy.html">Html academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-page">
+      <section class="intro">
+        <header class="intro__header">
+          <h3 class="visually-hidden">Блок приветсвия</h3>
+          <img class="intro__intro-image" src="img/welcome.svg" width="459" height="353" alt="Картинка добро пожаловать">
+        </header>
+      </section>
+      <section class="preview">
+        <header class="preview__header">
+          <h2 class="preview__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <p class="preview__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </header>
+      </section>
+      <section class="reason">
+        <div class="reason__wrapper">
+          <header class="reason__header">
+            <h3 class="reason__title">Настоящий городок</h3>
+            <span class="reason__item-number">— №1 —</span>
+            <p class="reason__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </header>
+          <div>
+            <img class="reason reason-image--state-pictures" src="img/state.jpg" width="800" height="256" alt="Город">
+          </div>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="advantages-wrapper">
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--house-ico">
+              <h3 class="advantages__title">Жильё</h3>
+              <p class="advantages__description">Рекомендуем пожить в настоящем мотеле, всё как в кино</p>
+            </li>
+            <li class="advantages__item advantages__item--food-ico">
+              <h3 class="advantagem__title">Еда</h3>
+              <p class="advantages__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+            <li class="advantages__item advantages__item--souvenirs-ico">
+              <h3 class="advantages__title">Сувениры</h3>
+              <p class="advantages__description">Не только китайского, но и местного производства</p>
+            </li>
+          </ul>
+      </section>
+      <section class="reason">
+        <div class="reason__wrapper">
+          <div class="reason-image">
+            <img class="reason reason-image--bridge-pictures" src="img/bridge.jpg" width="800" height="256" alt="Мост дъявола">
+          </div>
+          <header class="reason__header">
+            <h3 class="reason__title">Там есть<br> мост дьявола</h3>
+            <span class="reason__item-number">— №2 —</span>
+            <p class="reason__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        </div>
+      </section>
+      <section class="reason">
+        <div class="reason__wrapper">
+          <ul class="reason__list">
+            <li class="reason__wrapper">
+              <h3 class="reason__title">Небольшая площадь</h3>
+              <span class="reason__item-number">— №3 —</span>
+              <p class="reason__description">Все достопримечательности находятся очень близко</p>
+            </li>
+            <li class="reason-item">
+              <h3 class="reason__title">Красивая дорога</h3>
+              <span class="reason__item-number">— №4 —</span>
+              <p class="reason__description">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
+            </li>
+            <li class="reason-item">
+              <h3 class="reason__title">Мало туристов</h3>
+              <span class="reason__item-number">— №5 —</span>
+              <p class="reason__description">Большинство едет в гранд каньон и&nbsp;толпится там</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="search">
+        <h2 class="search__title">Заинтересовались?</h2>
+        <p class="search__description">Укажите предполагаемые даты поездки,<br>
+          и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <a class="button search__button" href="#">Поиск гостиницы в седоне</a>
+      </section>
+      <section class="maps modal__map">
+        <h3 class=visually-hidden>Блок карты</h3>
+        <img class="maps__image imgage_map" src="img/maps.png" width="1200" height="594" alt="Карта штата">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1671192.5983413013!2d-112.0299562!3d35.1055112!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1550922215267"
+          width="1200" height="594" style="border:0" allowfullscreen></iframe>
+      </section>
+    </main>
+
+    <footer class="page-footer page__footer--index">
+      <div class="page-footer__wrapper">
+        <p class="page-footer page__footer">#VisitSedona</p>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item"><a class="social-link social-link--twitter" href="#"><span class="visually-hidden">Твиттер</span>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15">
+                  <path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z">
+                  </path>
+                </svg>
+              </a></li>
+            <li class="social__item"><a class="social-link social-link--facebook" href="#"><span class="visually-hidden">Фейсбук</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
+                  <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z">
+                  </path>
+                </svg>
+              </a></li>
+            <li class="social__item"><a class="social-link social-link--youtube" href="#"><span class="visually-hidden">Ютуб</span>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
+                  <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z">
+                  </path>
+                </svg>
+              </a></li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
+          HTML Academy</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="src/js/libs.min.js" charset="utf-8"></script>
+</body>
+
+</html>
