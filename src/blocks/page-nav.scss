@@ -1,1 +1,31 @@
+.page-nav__wrapper {
+  display: flex;
+}
 
+.page-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: blue;
+}
+
+.site-list__item  a{
+  display: inline-block;
+  padding: 5px;
+  color: #fff;
+}
+@media screen and (min-width: $tablet-width) {
+  .page-nav__toogle {
+    display: none;
+  }
+
+  .page-nav__list {
+    display: flex;
+
+  }
+  .site-list__item  a{
+    width: 150px;
+    background-color: #fff;
+    color: #000;
+  }
+}
