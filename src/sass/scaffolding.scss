@@ -47,8 +47,21 @@ input[type="checkbox"].visually-hidden {
 }
 
 .container {
+  max-width: 320px;
   background: #ffffff;
   -webkit-box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   margin: 0 auto;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .container {
+    max-width: 786px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .container {
+    max-width: 1200px;
+  }
 }
