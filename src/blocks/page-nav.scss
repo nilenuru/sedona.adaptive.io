@@ -17,20 +17,21 @@
 
 .site-list__item {
   text-align: center;
-  width: AUTO;
+  width: auto;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
   background-color: #81b3d2;
 }
 
 .site-list__item a {
-  display: block;
+  color: #fff;
+  display: inline-block;
   padding-top: 21px;
   padding-bottom: 21px;
-  color: #fff;
+
 }
 @media screen and (min-width:$tablet-width) {
 
-  .main-nav {
+  .page-nav {
     width: auto;
     margin: 0;
   }
@@ -40,28 +41,31 @@
 
   .site-list {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .site-list__item {
+    width: 153px;
     background-color: #fff;
     box-shadow: none;
   }
 
   .site-list__item a {
     color: #000;
+
+
     padding-top: 22px;
     padding-bottom: 22px;
   }
 }
 @media screen and (min-width:$desktop-width) {
   .site-list__item {
+    width: 240px;
     background-color: #fff;
     box-shadow: none;
   }
 
   .site-list__item a {
-    color: #000;
-    padding-top: 22px;
-    padding-bottom: 22px;
+
   }
 }
