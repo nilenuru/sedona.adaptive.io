@@ -31,9 +31,9 @@ gulp.task('browser-sync', function() {
 
 gulp.task('scripts', function() {
   return gulp.src([
-      'src/libs/jquery/dist/jquery.min.js'
+      'src/js/script.js'
     ])
-    .pipe(concat('libs.min.js'))
+    .pipe(concat('script.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('src/js'));
 });

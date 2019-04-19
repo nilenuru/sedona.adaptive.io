@@ -1,0 +1,48 @@
+.preview,
+.preview__slogan,
+.preview__description {
+  @include reset;
+}
+
+.preview__header {
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 33px;
+  padding-bottom: 22px;
+  text-align: center;
+}
+.preview__slogan {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 43px;
+  color: #333;
+}
+
+.preview__description {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+@media screen and (min-width: $tablet-width) {
+  .preview__header {
+    padding-top: 51px;
+    padding-left: 139px;
+    padding-right: 139px;
+    padding-bottom: 55px;
+  }
+  .preview__slogan {
+    font-size: 21px;
+  }
+
+}
+
+@media screen and (min-width: $desktop-width) {
+  .preview__header {
+    padding-left: 355px;
+    padding-right: 355px;
+  }
+}
