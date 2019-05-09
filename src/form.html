@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    < class="container">
+    <div class="container">
         <h1 class="visually-hidden">Форма отзыва</h1>
         <header class="page-header">
             <a class="page-header__logo-link" href="">
@@ -46,15 +46,28 @@
                 <form action="" class="page-form__inputs inputs-list"></form>
                 <div class="inputs-list__item">
                     <h3 class="inputs__heading">Ваше общее впечатление:</h3>
-                    <input type="radio" class="radio">Скорее положительное</input>
-                    <input type="radio" class="radio">Скорее отрицательное</input>
-                    <input type="radio" class="radio">Затрудняюсь ответить</input>
+                    <input type="checkbox" class="checkbox">Скорее положительное</input>
+                    <input type="checkbox" class="checkbox">Скорее отрицательное</input>
+                    <input type="checkbox" class="checkbox">Затрудняюсь ответить</input>
                 </div>
                 <div class="inputs-list__item">
-                    <h3 class="inputs__heading">ВАше Общее впечатление:</h3>
+                    <h3 class="inputs__heading">Представьтесь:</h3>
                     <input>ИМЯ*:</input>
                     <input>ФАМИЛИЯ*:</input>
                     <input>Отчество:</input>
+                </div>
+                <div class="inputs-list__item">
+                    <h3 class="inputs__heading">Контактная информация:</h3>
+                    <input>Телефон*::</input>
+                    <input>Электронная почта*:</input>
+                </div>
+                <div class="inputs-list__item">
+                    <h3 class="inputs__heading">посещенные достопримечательности:
+                    </h3>
+                    <input type="checkbox" class="checkbox" checked>Мост Дьявола</input>
+                    <input type="checkbox" class="checkbox" checked>Гора-Колокол</input>
+                    <input type="checkbox" class="checkbox" checked>Слайд-парк</input>
+                    <input type="checkbox" class="checkbox">Красные скалы</input>
                 </div>
                 </form>
             </section>
@@ -99,8 +112,8 @@
                 </div>
             </div>
         </footer>
-        </div>
-        <script src="js/script.js"></script>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
