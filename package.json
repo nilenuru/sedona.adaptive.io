@@ -4,10 +4,11 @@
   "description": "* `npm install` - установка зависимостей * `npm run build` - сборка проекта * `npm test` - запуск теста на наличие стилистических ошибок * `npm start` - сборка проекта и запуск локального сервера * `npm run deploy` - сборка проекта и отправка собранного проекта на GitHub Pages",
   "main": "gulpfile.js",
   "dependencies": {
-    "bower": "^1.8.8"
+    "bower": "^1.8.8",
+    "scripts": "^0.1.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.5",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-build": "^0.5.3",
@@ -21,7 +22,16 @@
     "gulp-sync-bower": "^1.0.0",
     "gulp-uglifyjs": "^0.6.2",
     "gulp-watch": "^5.0.1",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
     "node-sass": "^4.11.0",
+    "postcss-reporter": "^6.0.1",
+    "postcss-scss": "^2.0.0",
+    "prettier": "^1.17.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-prettier": "^5.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-order": "^3.0.0",
     "watch": "^1.0.2"
   },
   "scripts": {
