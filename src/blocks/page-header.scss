@@ -4,12 +4,23 @@
   flex-direction: column;
 }
 
+.logo-wrapper {
+  height: 58px;
+}
+.logo {
+  position: relative;
+  width: 102px;
+  height: 83px;
+  margin: 0 auto;
+  z-index: 100;
+
+}
 .page-header__logo-link {
   width: 102px;
   height: 83px;
   order: 2;
-
 }
+
 
 @media screen and (min-width: $tablet-width) {
   .page-header__logo-link {

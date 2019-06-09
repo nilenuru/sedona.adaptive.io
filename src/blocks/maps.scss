@@ -1,0 +1,21 @@
+.maps img {
+  display: none;
+}
+
+.maps iframe {
+  width: 320px;
+}
+
+
+@media screen and (min-width: $tablet-width) {
+  .maps iframe {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .maps iframe {
+    width: 1200px;
+    height: 358px;
+  }
+}

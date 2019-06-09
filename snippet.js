@@ -7,8 +7,3 @@ gulp.task('default', function() {
     }));
 });
 
-
-open-in-browsers
-pigments
-minimap
-autocomplete-paths

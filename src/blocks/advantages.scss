@@ -1,0 +1,128 @@
+.advantages,
+.advantages__list,
+.advantages-title,
+.advantages__description {
+  @include reset;
+}
+
+.advantages {
+  display: flex;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333;
+  font-weight: 400;
+}
+
+.advantages__title {
+  color: #000;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 25px;
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 41px;
+}
+
+.advantages__item {
+  position: relative;
+  padding-left: 69px;
+  padding-right: 41px;
+  padding-bottom: 38px;
+}
+
+.advantages__item--house-ico::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 21px;
+  background-image: url("../img/icon-house.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  width: 39px;
+  height: 37px;
+}
+
+.advantages__item--souvenirs-ico::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: 25px;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  width: 32px;
+  height: 38px;
+}
+
+.advantages__item--food-ico::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 18px;
+  background-image: url("../img/icon-burger.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  width: 40px;
+  height: 36px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .advantages__list {
+    flex-direction: row;
+    padding-top: 164px;
+   }
+
+  .advantages__item {
+    padding-left: 47px;
+    padding-right: 47px;
+    text-align: center;
+    
+  }
+
+  .advantages__item:nth-child(2){
+    order: 3;
+  }
+
+  .advantages__item--house-ico::before {
+    width: 75px;
+    height: 72px;
+    top: -82px;
+    left: 90px;
+  }
+  .advantages__item--souvenirs-ico::before {
+    width: 64px;
+    height: 75px;
+    top: -82px;
+    left: 90px;
+  }
+  .advantages__item--food-ico::before {
+    width: 77px;
+    height: 68px;
+    top: -82px;
+    left: 90px;
+  }
+}
+@media screen and (min-width: $desktop-width) {
+  .advantages__item {
+    padding-left: 70px;
+    padding-right: 70px;
+    text-align: center;
+    width: 400px;
+  }
+
+  .advantages__item--house-ico::before,
+  .advantages__item--souvenirs-ico::before,
+  .advantages__item--food-ico::before {
+    top: -85px;
+    left: 165px;
+  }
+}
