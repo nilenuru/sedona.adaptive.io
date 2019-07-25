@@ -1,57 +1,62 @@
-/**
- * Linting Sass stylesheets with Stylelint
- * http://www.creativenightly.com/2016/02/How-to-lint-your-css-with-stylelint/
- */
+var gulp = require('gulp'),
+  sass = require('gulp-sass'),
+  // plumber = require('gulp-plumber'),
+  browserSync = require('browser-sync'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglifyjs'),
+  cleanCSS = require('gulp-clean-css'),
+  rename = require("gulp-rename"),
+  postcss = require('gulp-postcss'),
+  watch = require('gulp-watch'),
+  autoprefixer = require('gulp-autoprefixer');
 
-var gulp        = require('gulp');
-
-var postcss     = require('gulp-postcss');
-var reporter    = require('postcss-reporter');
-var syntax_scss = require('postcss-scss');
-var stylelint   = require('stylelint');
-
-gulp.task("scss-lint", function() {
-
-  // Stylelint config rules
-  var stylelintConfig = {
-    "rules": {
-      "block-no-empty": true,
-      "color-no-invalid-hex": true,
-      "declaration-colon-space-after": "always",
-      "declaration-colon-space-before": "never",
-      "function-comma-space-after": "always",
-      "function-url-quotes": "double",
-      "media-feature-colon-space-after": "always",
-      "media-feature-colon-space-before": "never",
-      "media-feature-name-no-vendor-prefix": true,
-      "max-empty-lines": 5,
-      "number-leading-zero": "never",
-      "number-no-trailing-zeros": true,
-      "property-no-vendor-prefix": true,
-      "rule-no-duplicate-properties": true,
-      "declaration-block-no-single-line": true,
-      "rule-trailing-semicolon": "always",
-      "selector-list-comma-space-before": "never",
-      "selector-list-comma-newline-after": "always",
-      "selector-no-id": true,
-      "string-quotes": "double",
-      "value-no-vendor-prefix": true
-    }
-  }
-
-  var processors = [
-    stylelint(stylelintConfig),
-    reporter({
-      clearMessages: true,
-      throwError: true
-    })
-  ];
-
-  return gulp.src(
-      ['app/assets/css/**/*.scss',
-      // Ignore linting vendor assets
-      // Useful if you have bower components
-      '!app/assets/css/vendor/**/*.scss']
-    )
-    .pipe(postcss(processors, {syntax: syntax_scss}));
+gulp.task('sass', function () {
+  return gulp.src('src/sass/style.scss')
+    // .pipe(plumber())
+    .pipe(sass())
+    .pipe(cleanCSS())
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('src/css'))
+    // .pipe(autoprefixer({
+    //   browsers: ['last 2 versions'],
+    //   cascade: false
+    //   }))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
+
+gulp.task('browser-sync', function () {
+  browserSync({
+    server: {
+      baseDir: 'src'
+    },
+    notify: false
+  });
+});
+
+gulp.task('scripts', function () {
+  return gulp.src([
+      'src/js/script.js'
+    ])
+    .pipe(concat('script.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('src/js'));
+});
+
+/*gulp.task('css-libs', function() {
+  return gulp.src('src/css/style.css')
+      .pipe(cleanCSS())
+      .pipe(rename('style.min.css'))
+      //.pipe(concat('style.css'))
+      .pipe(gulp.dest('src/css'));
+      //.pipe(cleanCSS({compatibility: 'ie8'
+      //  .pipe(postcss())
+});*/
+gulp.task('watch', function () {
+  gulp.watch('src/sass/style.scss', gulp.parallel('sass'));
+  gulp.watch('src/*.html', browserSync.reload);
+  gulp.watch(['src/js/common.js', 'src/libs/**/*.js'], gulp.parallel('scripts'));
+});
+
+gulp.task('default', gulp.parallel('sass', 'browser-sync', 'watch', 'scripts'));

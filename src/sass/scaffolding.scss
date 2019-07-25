@@ -1,4 +1,4 @@
-*,
+r*,
 *::after,
 *::before {
   -webkit-box-sizing: inherit;
@@ -42,7 +42,7 @@ a {
 
 img {
   max-width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active),
